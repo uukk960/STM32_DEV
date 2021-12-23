@@ -92,6 +92,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  // Comment for git test
+
 	  if (!HAL_GPIO_ReadPin(GPIO_SW_GPIO_Port, GPIO_SW_Pin)){
 		  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 0);
 	  }
