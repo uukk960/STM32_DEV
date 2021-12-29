@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,15 +92,20 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  // Comment for git test
 
-	  if (!HAL_GPIO_ReadPin(GPIO_SW_GPIO_Port, GPIO_SW_Pin)){
-		  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 0);
-	  }
-	  else{
-		  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 1);
-	  }
+	1  /*LED blinking*/
+	  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 1);
+	  HAL_Delay(100);
+	  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 0);
+	  HAL_Delay(100);
 
+//	  /*LED with switch*/
+//	  if(!HAL_GPIO_ReadPin(GPIO_SW_GPIO_Port, GPIO_SW_Pin)){
+//		  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 0);
+//	  }
+//	  else{
+//		  HAL_GPIO_WritePin(GPIO_LED_GPIO_Port, GPIO_LED_Pin, 1);
+//	  }
 
     /* USER CODE END WHILE */
 
